@@ -53,8 +53,38 @@ body {
 }
 
 /* === BACKGROUND IMAGE === */
-.bg-image {
-  background-image: url("../graphics/backgroundv1.png");
+.bg-image1 {
+  background-image: url("../graphics/backgroundv2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;   /* fills screen at least */
+  height: auto;        /* expands automatically if content is taller */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.bg-image2 {
+  background-image: url("../graphics/backgroundv3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;   /* fills screen at least */
+  height: auto;        /* expands automatically if content is taller */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.bg-image3 {
+  background-image: url("../graphics/backgroundv4.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
