@@ -29,6 +29,7 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
+  font-family:"Bauhaus Demi", sans-seriff;
 }
 
 .topnav a {
@@ -260,6 +261,27 @@ main h1 {
   color: #F5DAA7;
   text-decoration: none;
   font-weight: bold;
+}
+
+.footernav {
+    word-spacing: 28px;
+    font-family: "Bauhaus Demi", sans-seriff;
+}
+
+.footernav a {
+  font-size: 18px;
+  color: #F5DAA7;
+  text-decoration: none;
+  font-weight: bold;
+  word-spacing: 28px;
+  display: inline-block; /* required for translateY to work */
+  transition: transform 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.footernav a:hover {
+    color: #FFD93D;
+    transform: translateY(-5px);
+    font-size: 1.3em; /* about 2px larger on most screens */
 }
 
 .footer h2 {
