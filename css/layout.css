@@ -103,7 +103,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: static;
   min-height: 100vh;   /* fills screen at least */
   height: auto;        /* expands automatically if content is taller */
   display: flex;
@@ -250,4 +250,40 @@ main h1 {
   color: #FFD93D;
   font-family: "Bauhaus Demi", sans-serif;
   text-align: center;
+}
+/* === Tooltip Styles === */
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  color: #FFD93D; /* matches your color scheme */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: rgb(60, 60, 60); /* dark gray, fits theme */
+  color: #F5DAA7; /* your light gold text */
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Arial, sans-serif; /* matches body font */
+
+  /* Positioning above the text */
+  position: absolute;
+  bottom: 125%; 
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Fade-in effect */
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1000;
+  white-space: nowrap; /* prevents wrapping */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 100%;
 }
