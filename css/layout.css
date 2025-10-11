@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+/* === FONTS === */
+@font-face {
+  font-family: Bauhaus Demi;
+  src: url("fonts/Bauhaus Demi.ttf");
+}
+
+/* === GLOBAL RESETS === */
+* {
+  box-sizing: border-box; /* (fixed typo from 'border-sizing') */
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #F5DAA7;
+  background-color: black;
+}
+
+/* === TOP NAV === */
+.topnav {
+  background-color: rgb(30 30 30);
+  overflow: hidden;
+  padding: 5px 0;
+  width: 100%;
+  position: static;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #FFD93D;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: rgb(60 60 60);
+  color: #FFD93D;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.topnav a.active {
+  font-weight: bold;
+}
+
+/* === BACKGROUND IMAGE === */
+.bg-image {
+  background-image: url("../graphics/backgroundv1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;   /* fills screen at least */
+  height: auto;        /* expands automatically if content is taller */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.roadmap-bg {
+	  background-image: url("../graphics/Roadmap.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;   /* fills screen at least */
+  height: auto;        /* expands automatically if content is taller */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+
+/* === LOGOS (if used) === */
+.logo-image1 {
+  width: 250px;
+  float: right;
+  margin: 0 50px 0 auto;
+}
+
+.logo-image2 {
+  width: 250px;
+  float: left;
+  margin: 0 auto 0 50px;
+}
+
+/* === CONTENT BOX === */
+.contentbox {
+  display: flex;
+  flex-direction: column; /* stack header and main */
+  align-items: center;
+  max-width: 1000px;
+  margin: 10px auto 0px;
+  border: outset thick rgb(255 255 255 / 75%);
+  border-radius: 25px;
+  background-color: rgb(30 30 30 / 75%);
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+/* === HEADER === */
+header {
+  font-family: "Bauhaus Demi";
+  color: #FFD93D;
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+header a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFD93D;
+  font-size: 20px;
+}
+
+/* === MAIN CONTENT === */
+main {
+  display: flex;
+  flex-direction: column; /* stack h1 above .articles */
+  align-items: center;
+  gap: 2em;/* spacing between heading and articles */
+  margin: 75px auto 0 auto;
+  max-width: 900px;
+  padding: 0 1em 1em;
+  box-sizing: border-box;
+}
+
+main h1 {
+  font-family: "Bauhaus Demi";
+  text-align: center;
+  color: #FFD93D;
+  margin-bottom: 0;
+}
+
+/* === ARTICLES CONTAINER === */
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2em;
+  width: 100%;
+}
+
+/* === ARTICLE CARDS === */
+.articles article {
+  flex: 1 1 calc(50% - 2em); /* 2 per row */
+  background-color: rgb(100 100 100 / 75%);
+  border: 5px outset rgb(255 255 255 / 35%);
+  border-radius: 25px;
+  color: #F5DAA7;
+  font-size: 17px;
+  padding: 1.5em;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.articles article h2 {
+  color: #FFD93D;
+  font-family: "Bauhaus Demi", sans-serif;
+  text-align: center;
+}
+
+.articles article:hover {
+  border: 5px outset rgb(255 255 255 / 100%);
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+.articles article a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFD93D;
+}
+
+.articles article a:hover {
+  background-color: rgb(60 60 60 / 25%);
+  color: #FFD93D;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* === RESPONSIVE: SINGLE COLUMN ON MOBILE === */
+@media (max-width: 700px) {
+  .articles article {
+    flex: 1 1 100%;
+  }
+}
+
+/* === FOOTER === */
+.footer {
+  width: 100%;
+  background-color: rgb(30 30 30);
+  text-align: center;
+  color: #F5DAA7;
+  padding: 1em 0;
+  margin-top: auto;
+}
+
+.footer a {
+  color: #F5DAA7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer h2 {
+  color: #FFD93D;
+  font-family: "Bauhaus Demi", sans-serif;
+  text-align: center;
+}
