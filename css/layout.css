@@ -129,6 +129,20 @@ body {
   padding-bottom: 2em;
 }
 
+.bg-image4 {
+  background-image: url("../graphics/backgroundv5.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;   /* fills screen at least */
+  height: auto;        /* expands automatically if content is taller */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
 
 /* === LOGOS (if used) === */
 .logo-image1 {
@@ -334,4 +348,14 @@ main h1 {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 100%;
+}
+
+.fh-logo {
+  display: block;
+  margin: 0 auto 0 auto; /* center horizontally + small space below */
+  width: 100px; /* adjust to desired size */
+  height: auto;
+  border-radius: 12px; /* optional: slightly rounded edges */
+  opacity: 0.9; /* optional: subtle transparency to blend in */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
