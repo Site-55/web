@@ -1,87 +1,94 @@
 <!DOCTYPE html>
-<html lang="sv">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Site-55 | Home</title>
-	<link rel="icon" type="image/x-icon" href="graphics/logo.png">
-	<link href="css/layout.css" type="text/css" rel="stylesheet">
-	<link href="sub-sites/careers.html" type="text/html" rel="index">
-	<link href="sub-sites/roadmap.html" type="text/html" rel="index">
-	<link href="sub-sites/contact.html" type="text/html" rel="index">
-    <link href="sub-sites/factions.html" type="text/html" rel="index">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-	
-<body>  
-    <div class="topnav">
-		<a class="active" href="index.html">Home</a>
-		<a href="sub-sites/careers.html">Careers</a>
-        <a href="sub-sites/factions.html">Factions</a>        
-        <a href="sub-sites/contact.html">Contact</a>
-        <a href="sub-sites/roadmap.html">Roadmap (PC only)</a>
-		<a href="https://discord.gg/RRUcamNFb8"><i class="fa-brands fa-discord fa-xl" style="color: #FFD43B;"></i></a>
-        <a href="https://www.instagram.com/site55rblx/"><i class="fa-brands fa-instagram fa-xl"></i></a>
-    </div>
-
-<div class="bg-image1">
-    <div class="contentbox">
-    <header>
-      <h1>SITE-55</h1>
-		<p> Quick Navigation</p>
-		<p style="font-size: 20px;"> <a href="#contact"> Contact &#38; Information </a></p>
-    </header>
-
-    <main >
-	<h1 id="overview">HOME</h1>
-		<div class="articles">
-      <article>
-        <h2>Game</h2>
-        <p>Site-55 is a private RP server in the game SCP:RP on Roblox. We host sessions where you can join and have fun with some of the most respected members of the community!</p>
-      </article>
-      <article>
-        <h2>Discord</h2>
-        <p>The Site-55 Discord server is for all official communications. Here you can see sneak-peeks, major and minor announcements, events and much more! Join by pressing the "Discord Server" button above!</p>
-      </article>
-      <article>
-        <h2>Departments</h2>
-        <p>Site-55 has several departments, including the Game and Discord Moderation Departments, Morphing Department, Acting Department, Event Hosting Department and the Development Department - Apply in our Discord server!</p>
-      </article>
-      <article>
-        <h2>Foundership</h2>
-        <p>Site-55 was founded and established by Liam V4 and Co-Founder Vabzie. These users are experienced and recognized within the SCP:RP community. Their team has together built this server and the game map from scratch!</p>
-      </article>
-		</div>
-    </main>
-  </div>
-</div>
-
-<div class="footer" style="text-align: center">
-        <h2 id="contact">Web Developer</h2>
-        <p>Discord: flevie</p>
-        <p>Email: <a href="mailto:flevie@thegrove.se">flevie@thegrove.se</a></p>
-        <h2>Information</h2>
-        <p>
-            © 2025 flevie. All rights reserved • v.
-            <span class="tooltip"> Alpha-07: "Contact Page"
-                <span class="tooltiptext">Alpha (0) v0.0.7 • Build 15/10-25</span>
-            </span>
-        </p>
-		<p>This content may not be copied, reproduced, distributed, or modified without prior written permission from the author.</p>
-    <br>
+<html lang="sv"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Site-55 | Home</title> 
+        <link rel="icon" type="image/x-icon" href="graphics/logo.png"> 
+        <link href="css/layout.css" type="text/css" rel="stylesheet"> 
+        <link href="sub-sites/careers.html" type="text/html" rel="index"> 
+        <link href="sub-sites/roadmap.html" type="text/html" rel="index"> 
+        <link href="sub-sites/contact.html" type="text/html" rel="index"> 
+        <link href="sub-sites/factions.html" type="text/html" rel="index"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
+        <link rel="stylesheet" href="https://use.typekit.net/jdl0tbl.css"> 
+    </head> 
     
-    <img src="graphics/logo.png" alt="Site-55 Logo" class="footer-logo">
-    <div class="footernav">
-      <p>
-        <a href="index.html">Home  </a> 
-		<a href="sub-sites/careers.html">  Careers  </a>
-        <a href="sub-sites/contact.html">  Contact  </a> 
-        <a href="sub-sites/factions.html">  Factions  </a>
-        <a href="sub-sites/roadmap.html">  Roadmap  </a>
-		<a href="https://discord.gg/RRUcamNFb8"><i class="fa-brands fa-discord fa-xl"></i></a>
-        <a href="https://www.instagram.com/site55rblx/"><i class="fa-brands fa-instagram fa-xl"></i></a>
-      </p>
-    </div>
-</div>
-</body>
+    <body> 
+         <canvas id="background"></canvas> 
+        <div class="topnav"> 
+            <a class="active" href="index.html">Home</a> 
+            <a href="sub-sites/careers.html">Careers</a> 
+            <a href="sub-sites/factions.html">Factions</a> 
+            <a href="sub-sites/contact.html">Contact</a> 
+            <a href="sub-sites/roadmap.html">Roadmap (PC only)</a> 
+            <a href="https://discord.gg/RRUcamNFb8"><i class="fa-brands fa-discord fa-xl" style="color: #FFD43B;"></i></a> 
+            <a href="https://www.instagram.com/site55rblx/"><i class="fa-brands fa-instagram fa-xl"></i></a> 
+        </div>
+        <div class="contentbox"> 
+            <header> 
+                <h1>SITE-55</h1> 
+                <p> Quick Navigation</p> 
+                <p style="font-size: 20px;"> <a href="#contact"> Contact &#38; Information </a></p> 
+            </header> 
+            
+            <main > 
+                <h1 id="overview">HOME</h1> 
+                <div class="articles"> 
+                    <article> 
+                        <h2>Game</h2> 
+                        <p>
+                            Site-55 is a private RP server in the game SCP:RP on Roblox. We host sessions where you can join and have fun with some of the most respected members of the community!
+                        </p> 
+                    </article> 
+                    
+                    <article> 
+                        <h2>Discord</h2> 
+                        <p>
+                            The Site-55 Discord server is for all official communications. Here you can see sneak-peeks, major and minor announcements, events and much more! Join by pressing the "Discord Server" button above!
+                        </p> 
+                    </article> 
+                    
+                    <article> 
+                        <h2>Departments</h2> 
+                        <p>
+                            Site-55 has several departments, including the Game and Discord Moderation Departments, Morphing Department, Acting Department, Event Hosting Department and the Development Department - Apply in our Discord server!
+                        </p> 
+                    </article> 
+                    
+                    <article> 
+                        <h2>Foundership</h2> 
+                        <p>
+                            Site-55 was founded and established by Liam V4 and Co-Founder Vabzie. These users are experienced and recognized within the SCP:RP community. Their team has together built this server and the game map from scratch!
+                        </p> 
+                    </article> 
+                </div> 
+            </main> 
+        </div>
+        <div class="footer" style="text-align: center"> 
+            <p> © 2025 flevie. <br> All rights reserved. <br> <br>
+                v. 
+                <span class="tooltip"> Alpha-08: "Cooler Background" 
+                    <span class="tooltiptext">Alpha (0) v0.0.8 • Build 16/10-25
+                    </span> 
+                </span> 
+            </p> 
+            
+            <p>This content may not be copied, reproduced, distributed, or modified without prior written permission from the author.</p> 
+            <br> 
+            <img src="graphics/logo.png" alt="Site-55 Logo" class="footer-logo"> 
+            <div class="footernav"> 
+                <p> 
+                    <a href="index.html">Home </a> 
+                    <a href="sub-sites/careers.html"> Careers </a> 
+                    <a href="sub-sites/contact.html"> Contact </a> 
+                    <a href="sub-sites/factions.html"> Factions </a> 
+                    <a href="sub-sites/roadmap.html"> Roadmap </a> 
+                    <a href="https://discord.gg/RRUcamNFb8"><i class="fa-brands fa-discord fa-xl"></i></a> 
+                    <a href="https://www.instagram.com/site55rblx/"><i class="fa-brands fa-instagram fa-xl"></i></a> 
+                </p> 
+            </div> 
+        </div> 
+        <script src="js/background.js"></script> 
+    </body> 
 </html>

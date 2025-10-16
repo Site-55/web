@@ -14,7 +14,7 @@
 body {
   height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "montserrat", sans-serif;
   color: #F5DAA7;
   background-color: black;
 }
@@ -22,12 +22,15 @@ body {
 /* === TOP NAV === */
 .topnav {
   display: flex;
-  justify-content: center; /* centers the links horizontally */
-  align-items: center;
+  justify-content: left; /* centers the links horizontally */
+  align-items: left;
   background-color: rgb(30 30 30);
   padding: 5px 0;
   position: relative;
-  font-family:"Bauhaus Demi", sans-seriff;
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 20px;
 }
 
 .topnav a {
@@ -50,90 +53,26 @@ body {
   font-weight: bold;
 }
 
-/* === BACKGROUND IMAGE === */
-.bg-image {
-  background-image: url("../graphics/backgroundv1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;   /* fills screen at least */
-  height: auto;        /* expands automatically if content is taller */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
 
-.bg-image1 {
-  background-image: url("../graphics/backgroundv2.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;   /* fills screen at least */
-  height: auto;        /* expands automatically if content is taller */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-.bg-image2 {
-  background-image: url("../graphics/backgroundv3.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;   /* fills screen at least */
-  height: auto;        /* expands automatically if content is taller */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-.bg-image3 {
-  background-image: url("../graphics/backgroundv4.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;   /* fills screen at least */
-  height: auto;        /* expands automatically if content is taller */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 2em;
-  padding-bottom: 2em;
+/* Background canvas styling */
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: #000;
 }
 
 .roadmap-bg {
-	  background-image: url("../graphics/Roadmap.png");
+  background-image: url("../graphics/Roadmap.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: static;
-  min-height: 100vh;   /* fills screen at least */
-  height: auto;        /* expands automatically if content is taller */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-.bg-image4 {
-  background-image: url("../graphics/backgroundv5.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;   /* fills screen at least */
-  height: auto;        /* expands automatically if content is taller */
+  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -172,7 +111,9 @@ body {
 
 /* === HEADER === */
 header {
-  font-family: "Bauhaus Demi";
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: #FFD93D;
   text-align: center;
   font-size: 35px;
@@ -181,6 +122,7 @@ header {
 
 header h1 {
     margin-bottom: -.5em;
+    font-family:"Bauhaus Demi", sans-serif;
 }
 
 header p {
@@ -234,6 +176,7 @@ main h1 {
   padding: 1.5em;
   box-sizing: border-box;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .articles article h2 {
@@ -275,7 +218,7 @@ main h1 {
   text-align: center;
   color: #F5DAA7;
   padding: 1em 0;
-  margin-top: auto;
+  margin-top: 20px;
 }
 
 .footer a {
