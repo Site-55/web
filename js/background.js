@@ -1,17 +1,23 @@
 const canvas = document.getElementById("background");
 const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+
+// Function to resize canvas based on document height
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = document.body.scrollHeight; // cover all content
+}
+
+// Initial resize
+resizeCanvas();
+
+// Update canvas size on window resize
+window.addEventListener("resize", resizeCanvas);
 
 const numDots = 100;
 const dots = [];
 const mouse = { x: null, y: null, radius: 150 };
 
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
-
+// Track mouse position
 window.addEventListener("mousemove", e => {
   mouse.x = e.x;
   mouse.y = e.y;
@@ -21,6 +27,7 @@ window.addEventListener("mouseleave", () => {
   mouse.y = null;
 });
 
+// Create random dots
 for (let i = 0; i < numDots; i++) {
   dots.push({
     x: Math.random() * canvas.width,
@@ -31,6 +38,7 @@ for (let i = 0; i < numDots; i++) {
   });
 }
 
+// Draw dots
 function drawDots() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let dot of dots) {
@@ -41,6 +49,7 @@ function drawDots() {
   }
 }
 
+// Connect dots if close enough
 function connectDots() {
   for (let i = 0; i < dots.length; i++) {
     for (let j = i + 1; j < dots.length; j++) {
@@ -75,6 +84,7 @@ function connectDots() {
   }
 }
 
+// Animate dots
 function animate() {
   for (let dot of dots) {
     dot.x += dot.vx;
