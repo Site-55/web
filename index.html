@@ -10,25 +10,41 @@
         <link href="sub-sites/roadmap.html" type="text/html" rel="index"> 
         <link href="sub-sites/contact.html" type="text/html" rel="index"> 
         <link href="sub-sites/factions.html" type="text/html" rel="index"> 
+        <link href="sub-sites/lore.html" type="text/html" rel="index">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
         <link rel="stylesheet" href="https://use.typekit.net/jdl0tbl.css"> 
     </head> 
     
     <body> 
          <canvas id="background"></canvas> 
-        <div class="topnav"> 
-            <a class="active" href="index.html">Home</a> 
-            <a href="sub-sites/careers.html">Careers</a> 
-            <a href="sub-sites/factions.html">Factions</a> 
-            <a href="sub-sites/contact.html">Contact</a> 
-            <a href="sub-sites/roadmap.html">Roadmap</a> 
-            <a href="https://discord.gg/RRUcamNFb8"><i class="fa-brands fa-discord fa-xl" style="color: #FFD43B;"></i></a> 
-            <a href="https://www.instagram.com/site55rblx/"><i class="fa-brands fa-instagram fa-xl"></i></a> 
-            <a href="https://github.com/Site-55/web"><i class="fa-brands fa-github fa-xl"></i></a>
-        </div>
+<!-- New Responsive Dropdown Navigation -->
+        <nav class="navbar">
+          <div class="nav-logo">
+            <a href="index.html">SITE-55</a>
+          </div>
+
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fa fa-bars"></i>
+          </div>
+
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sub-sites/careers.html">Careers</a></li>
+            <li><a href="sub-sites/factions.html">Faction Hub</a></li>
+            <li><a href="sub-sites/lore.html">Lore</a></li>
+            <li><a href="sub-sites/contact.html">Contact</a></li>
+            <li><a href="sub-sites/roadmap.html">Roadmap</a></li>
+            <li class="nav-icons">
+              <a href="https://discord.gg/RRUcamNFb8"><i class="fa-brands fa-discord"></i></a>
+              <a href="https://www.instagram.com/site55rblx/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://github.com/Site-55/web"><i class="fa-brands fa-github"></i></a>
+            </li>
+          </ul>
+        </nav>
+
         <div class="contentbox"> 
             <header> 
-                <h1>SITE-55</h1> 
+              <h1>SITE-55</h1> 
                 <p> Quick Navigation</p> 
                 <p style="font-size: 18px;"> <a href="#information"> Information </a></p> 
             </header> 
@@ -69,8 +85,8 @@
             <p class="footer-dir"><a href="index.html"><strong>Home</strong></a></p>
             <p> © 2025 flevie. <br> All rights reserved. <br> <br>
                 v. 
-                <span class="tooltip"> Beta-00: "Full Rework" 
-                    <span class="tooltiptext">Beta (1) v1.0.0 • Build 16/10-25
+                <span class="tooltip"> Beta-01: "Lore page &#38; Navbar" 
+                    <span class="tooltiptext">Beta (1) v1.0.1 • Build 18/10-25
                     </span> 
                 </span> 
             </p> 
@@ -83,6 +99,7 @@
                     <a href="index.html">Home </a> 
                     <a href="sub-sites/careers.html"> Careers </a> 
                     <a href="sub-sites/factions.html"> Factions </a>
+                    <a href="sub-sites/lore.html">  Lore  </a>
                     <a href="sub-sites/contact.html"> Contact </a> 
                     <a href="sub-sites/roadmap.html"> Roadmap </a> 
                     <a href="https://discord.gg/RRUcamNFb8"><i class="fa-brands fa-discord fa-xl"></i></a> 
@@ -92,5 +109,6 @@
             </div> 
         </div> 
         <script src="js/background.js"></script> 
+        <script src="js/navbar.js"></script>
     </body> 
 </html>

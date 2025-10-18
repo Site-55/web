@@ -13,7 +13,7 @@ resizeCanvas();
 // Update canvas size on window resize
 window.addEventListener("resize", resizeCanvas);
 
-const numDots = 100;
+const numDots = 200;
 const dots = [];
 const mouse = { x: null, y: null, radius: 150 };
 

@@ -14,20 +14,34 @@
 
 <body>
   <canvas id="background"></canvas> 
-  <div class="topnav">
-    <a href="../index.html">Home</a>
-    <a href="../sub-sites/careers.html">Careers</a>
-    <a href="../sub-sites/factions.html">Factions</a>        
-    <a href="../sub-sites/contact.html">Contact</a>
-    <a class="active" href="../sub-sites/roadmap.html">Roadmap</a>
-    <a href="https://discord.gg/RRUcamNFb8"><i class="fa-brands fa-discord fa-xl" style="color: #FFD43B;"></i></a>
-    <a href="https://www.instagram.com/site55rblx/"><i class="fa-brands fa-instagram fa-xl"></i></a>
-    <a href="https://github.com/Site-55/web"><i class="fa-brands fa-github fa-xl"></i></a>
-  </div>
+<!-- New Responsive Dropdown Navigation -->
+        <nav class="navbar">
+          <div class="nav-logo">
+            <a href="../index.html">SITE-55</a>
+          </div>
+
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="fa fa-bars"></i>
+          </div>
+
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../sub-sites/careers.html">Careers</a></li>
+            <li><a href="../sub-sites/factions.html">Faction Hub</a></li>
+            <li><a href="../sub-sites/lore.html">Lore</a></li>
+            <li><a href="../sub-sites/contact.html">Contact</a></li>
+            <li><a href="../sub-sites/roadmap.html">Roadmap</a></li>
+            <li class="nav-icons">
+              <a href="https://discord.gg/RRUcamNFb8"><i class="fa-brands fa-discord"></i></a>
+              <a href="https://www.instagram.com/site55rblx/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://github.com/Site-55/web"><i class="fa-brands fa-github"></i></a>
+            </li>
+          </ul>
+        </nav>
     
 <div class="roadmap-container">
   <header>
-    <h1>ROADMAP</h1>
+    <h1>Roadmap</h1>
     <p> Quick Navigation</p>
     <p style="font-size: 18px;"> <a href="#information"> Information </a></p>
   </header>
@@ -89,10 +103,10 @@
       <p class="footer-dir"><a href="../index.html">Home</a> <span>/</span> <a href="../sub-sites/roadmap.html"><strong>Roadmap</strong></a></p>
             <p> © 2025 flevie. <br> All rights reserved. <br> <br>
                 v. 
-                <span class="tooltip"> Beta-00: "Full Rework" 
-                    <span class="tooltiptext">Beta (1) v1.0.0 • Build 16/10-25
+                <span class="tooltip"> Beta-01: "Lore page &#38; Navbar" 
+                    <span class="tooltiptext">Beta (1) v1.0.1 • Build 18/10-25
                     </span> 
-                </span>
+                </span> 
             </p> 
 		<p>This content may not be copied, reproduced, distributed, or modified without prior written permission from the author.</p>
     <br>
@@ -101,7 +115,8 @@
       <p>
         <a href="../index.html">Home  </a> 
 		<a href="../sub-sites/careers.html">  Careers  </a>
-        <a href="../sub-sites/factions.html">  Factions  </a>
+        <a href="../sub-sites/factions.html">  Faction Hub  </a>
+        <a href="../sub-sites/lore.html">  Lore  </a>
         <a href="../sub-sites/contact.html">  Contact  </a>
         <a href="../sub-sites/roadmap.html">  Roadmap  </a>
 		<a href="https://discord.gg/RRUcamNFb8"><i class="fa-brands fa-discord fa-xl"></i></a>
@@ -112,5 +127,6 @@
   </div>
 
   <script src="../js/background.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 </html>

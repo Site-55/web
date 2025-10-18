@@ -27,42 +27,6 @@ body {
   position: relative;
 }
 
-/* === TOP NAV === */
-.topnav { 
-  background-color: rgb(30 30 30); 
-  overflow: hidden; padding: 5px 0; 
-  width: 100%; 
-  position: static; 
-  left: 0; 
-  right: 0; 
-  z-index: 1000; 
-  font-family:"montserrat", sans-serif; 
-  margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap; /* allows wrapping on small screens */
-  justify-content: space-around; /* optional: spacing links evenly */
-}
-
-.topnav a {
-  display: block;
-  color: #FFD93D;
-  padding: 10px 8px;
-  text-decoration: none;
-  font-size: 20px;
-  text-align:center;
-}
-
-.topnav a:hover {
-  background-color: rgb(60 60 60);
-  color: #FFD93D;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-.topnav a.active {
-  font-weight: bold;
-}
-
 /* Background canvas styling */
 #background {
   position: absolute;
@@ -83,6 +47,9 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .roadmap-container header {
@@ -124,6 +91,52 @@ body {
   margin-top: 3em;
 }
 
+.lore-master-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 5em;
+  justify-items: center;
+  margin-top: 3em;
+  color: #D9D9D9;
+}
+
+.lore-horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  align-self: start; /* ensures all milestones align at top */
+}
+
+.lore-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  margin-bottom: -10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .lore-master-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4em;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .lore-master-grid {
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .roadmap-grid {
@@ -146,6 +159,7 @@ body {
   align-items: center;
   text-align: center;
   position: relative;
+  align-self:start;
 }
 
 .milestone-icon {
@@ -165,7 +179,7 @@ body {
 .milestone-date {
   font-weight: bold;
   color: #FFD93D;
-  margin-bottom: 10px;
+  margin-bottom: -5px;
   font-size: 16px;
 }
 
@@ -190,13 +204,11 @@ body {
   margin: 0;
 }
 
-
-
 /* === LOGOS (if used) === */
 .logo-image1 {
-  width: 250px;
+  max-width: 1.2em;
   float: right;
-  margin: 0 50px 0 auto;
+  margin: auto auto auto 5px;
   src: url("../graphics/logo.png");
 }
 
@@ -441,4 +453,144 @@ main h1 {
 
 .footer-dir a:hover {
     text-decoration: underline;
+}
+
+
+/* === NEW NAVBAR === */
+.navbar {
+  background-color: rgb(30, 30, 30);
+  color: #FFD93D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  position: relative;
+  z-index: 1000;
+  font-family: "montserrat", sans-serif;
+}
+
+/* Logo */
+.nav-logo a {
+  color: #FFD93D;
+  font-size: 1.6em;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Bauhaus Demi", sans-serif;
+}
+
+/* Toggle (Hamburger) */
+.nav-toggle {
+  display: none;
+  font-size: 1.8em;
+  color: #FFD93D;
+  cursor: pointer;
+}
+
+/* Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #FFD93D;
+  font-size: 1.1em;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  background-color: rgb(60, 60, 60);
+}
+
+/* Social Icons */
+.nav-icons a {
+  color: #FFD93D;
+  margin-left: 8px;
+  font-size: 1.3em;
+}
+
+.nav-icons a:hover {
+  color: #F5DAA7;
+}
+
+/* === Responsive Dropdown with Animation === */
+@media (max-width: 800px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-top: 1px solid rgb(60, 60, 60);
+    overflow: hidden;
+    max-height: 0;                /* Collapsed by default */
+    opacity: 0;                   /* Hidden */
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+  }
+
+  .nav-menu.show {
+    max-height: 500px;            /* Large enough for all links */
+    opacity: 1;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    margin: 0.5em 0;
+  }
+
+  .nav-menu li a {
+    display: block;
+    padding: 10px;
+  }
+
+  .nav-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 0.5em;
+  }
+}
+
+.loreLine {
+  border: solid 15px;
+  border-color:rgb(30, 30, 30, 0.7);
+  border-radius: 5px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-button {
+    display:none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgb(30,30,30);
+  border-radius: 20px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 217, 61, 0.4); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 217, 61); 
 }
