@@ -469,6 +469,14 @@ main h1 {
   font-family: "montserrat", sans-serif;
 }
 
+.navbar button {
+    background: rgb(40, 40, 40);
+    border: rgb();
+    color: #FFD93D;
+    font-family: "montserrat", sans-serif;
+    font-size: 1.1em;
+}
+
 /* Logo */
 .nav-logo a {
   color: #FFD93D;
@@ -541,13 +549,13 @@ main h1 {
   }
 
   .nav-menu.show {
-    max-height: 500px;            /* Large enough for all links */
+    max-height: 650px;            /* Large enough for all links */
     opacity: 1;
   }
 
   .nav-menu li {
     text-align: center;
-    margin: 0.5em 0;
+    margin: 0em 0 0.2em;
   }
 
   .nav-menu li a {
@@ -558,8 +566,8 @@ main h1 {
   .nav-icons {
     display: flex;
     justify-content: center;
-    gap: 1.5em;
-    margin-top: 0.5em;
+    gap: auto;
+    margin-top: 0em;
   }
 }
 
@@ -593,4 +601,23 @@ main h1 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(255, 217, 61); 
+}
+
+#theme-btn {
+    position: fixed;
+    right: 1em;
+    background: none;
+    border: none;
+    color: #FFD93D;
+    font-size: 1.6em;
+    padding: 0.6em 0.8em;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 2000; /* above canvas */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#theme-btn:hover {
+    transform: translateY(-3px);
+    color: #FFE066;
 }
