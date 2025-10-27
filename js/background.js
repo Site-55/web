@@ -69,8 +69,14 @@ window.addEventListener("resize", resizeCanvas);
 
 // === MOUSE TRACKING ===
 const mouse = { x: null, y: null, radius: 150 };
-window.addEventListener("mousemove", e => { mouse.x = e.x; mouse.y = e.y; });
-window.addEventListener("mouseleave", () => { mouse.x = null; mouse.y = null; });
+window.addEventListener("mousemove", e => {
+  mouse.x = e.clientX + window.scrollX;
+  mouse.y = e.clientY + window.scrollY;
+});
+window.addEventListener("mouseleave", () => { 
+  mouse.x = null; 
+  mouse.y = null;
+});
 
 // === DOTS, BATS, SNOW ===
 let dots = [], bats = [], snowflakes = [];
