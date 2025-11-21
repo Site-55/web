@@ -621,3 +621,101 @@ main h1 {
     transform: translateY(-3px);
     color: #FFE066;
 }
+
+.privacy-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  border-collapse: collapse;
+  font-family: "montserrat", sans-serif;
+  color: #F5DAA7;
+}
+
+.privacy-table th {
+  background: rgb(30, 30, 30, 0.7);
+  padding: 16px;
+  text-align: left;
+  color: #FFD93D;
+  font-size: 18px;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.privacy-table td {
+  padding: 18px 16px;
+  text-align: left;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.privacy-table td:first-child,
+.privacy-table td:nth-child(2) {
+  text-align: center;
+  width: 120px;
+}
+
+/* Checkmark style — purple like screenshot */
+.privacy-table td:contains("✔") {
+  color: #7C3AED; /* change to your preferred purple */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Subtle hover effect */
+.privacy-table tr:hover {
+  background-color: rgba(255,255,255,0.03);
+}
+
+/* === LOADER === */
+.loader {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;        /* text below circle */
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+  z-index: 9999;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Spinner */
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #fff;
+  border-top-color: #FFD93D;
+  border-radius: 50%;
+  animation: loading 1.5s ease infinite;
+  margin-bottom: 20px;
+}
+
+/* === LOADER TEXT === */
+.loader-text {
+  font-family: "Bauhaus Demi", sans-serif;
+  color: #F5DAA7;
+  font-size: 26px;
+  letter-spacing: 1px;
+  opacity: 1;
+  animation: textFade 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes textFade {
+  from { opacity: 0.35; }
+  to   { opacity: 1; }
+}
+
+@keyframes loading {
+  from { transform: rotate(0turn); }
+  to   { transform: rotate(1turn); }
+}
