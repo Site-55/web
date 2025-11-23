@@ -43,15 +43,17 @@
     
   <div class="contentbox">
     <header>
-      <h1>Contact</h1>
-		<p> Quick Navigation</p>
-		<p style="font-size: 18px;">
-            <a href="#founder"> Founder </a> │ 
-            <a href="#cofounder"> Co-Founder </a> │ 
-            <a href="#fhd"> Faction Hub Director </a> │
-            <a href="#development"> Web Development </a> │
-            <a href="#discordServer"> Main Contact</a>
-        </p>
+        <h1>Contact</h1>
+        <p>Quick Navigation</p>
+
+        <div class="quick-nav">
+            <a href="#founder">Founder</a>
+            <a href="#cofounder">Co-Founder</a>
+            <a href="#fhd">Faction Hub Director</a>
+            <a href="#development">Web Development</a>
+            <a href="#emailForm">Email Submit</a>
+            <a href="#discordServer">Main Contact</a>
+        </div>
     </header>
 
     <main>
@@ -102,6 +104,60 @@
                     <p style=" font-size: 18px"> flevie</p>
             </article>
           </div>
+      
+      <h1 id="emailForm">Email Submit</h1>
+      <div class="articles" style="text-align: center;">
+        <article>
+          <form action="https://formsubmit.co/flevie@thegrove.se" method="POST" style="max-width: 600px; width: 100%; margin:0 auto;">
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+              style="
+                width: 100%;
+                background-color: rgb(30 30 30);
+                border: 1px solid white;
+                color: white;
+                padding: 8px;
+                border-radius: 8px;
+                box-sizing: border-box;
+              "
+            >
+            <br>
+            <input type="hidden" name="_subject" value="New submission!">
+            <br>
+            <textarea
+              name="message"
+              placeholder="Email Content"
+              required
+              style="
+                width: 100%;
+                height: 150px;
+                background-color: rgb(30 30 30);
+                border: 1px solid white;
+                color: white;
+                border-radius: 12px;
+                padding: 8px;
+                text-indent: 0;
+                box-sizing: border-box;
+                resize: vertical; /* Allow resizing on mobile/desktop */
+              "
+            ></textarea>
+            <br>
+            <button
+              type="submit" 
+              class="emailSubmit"
+            >
+              Send
+            </button>
+
+          </form>
+
+        </article>
+      </div>
+      
       <h1 id="discordServer">MAIN CONTACT</h1>
         <div class="articles" style="text-align: center">
           <article>
@@ -116,8 +172,8 @@
       <p class="footer-dir"><a href="../">Home</a> <span>/</span> <a href="../contact/"><strong>Contact</strong></a></p>
             <p> © 2025 flevie. <br> All rights reserved. <br> <br>
                 v. 
-                <a href="https://github.com/Site-55/web"><span class="tooltip"> β-08: "Privacy Policy and Loading" 
-                    <span class="tooltiptext">Beta (1) v1.0.8 • Build 21/11-25
+                <a href="https://github.com/Site-55/web"><span class="tooltip"> β-09: "Layout Updates" 
+                    <span class="tooltiptext">Beta (1) v1.0.9 • Build 24/11-25
                     </span> 
                 </span>
                 </a>
